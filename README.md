@@ -231,7 +231,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🎬 Screenshots
 
-*[Add screenshots of the application here]*
+### 📝 Form Screens
+
+![Form Step One](assets/screenshot-form-one.png)
+![Form Step Two](assets/screenshot-form-two.png)
+
+### 🎯 Recommendations Screens
+
+![Recommendations Step One](assets/screenshot-recommendations-one.png)
+![Recommendations Step Two](assets/screenshot-recommendations-two.png)
 
 ## 🌟 Acknowledgments
 
@@ -240,6 +248,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Lucide React** for beautiful icons
 - **Express.js** for robust backend API
 - **Pexels** for movie poster placeholder images
+
+---
+
+## 🧑‍💻 Author
+
+**Nduoma Chinomso Christian**  
+_AKA Buzz Brain_
 
 ---
 
