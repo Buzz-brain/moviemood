@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Film, Github, Sparkles } from 'lucide-react';
+import { Film, Sparkles } from 'lucide-react';
 import PreferenceForm from './components/PreferenceForm';
 import RecommendationResults from './components/RecommendationResults';
 import LoadingAnimation from './components/LoadingAnimation';
@@ -74,15 +74,6 @@ function App() {
                 <p className="text-sm text-gray-300">AI-Powered Movie Expert</p>
               </div>
             </motion.div>
-
-            <motion.a
-              href="#"
-              className="flex items-center space-x-2 px-4 py-2 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:border-purple-500 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
-              <Github className="w-4 h-4" />
-              <span className="text-sm font-medium">View Code</span>
-            </motion.a>
           </div>
         </div>
       </motion.header>
