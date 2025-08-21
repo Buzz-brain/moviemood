@@ -1,6 +1,6 @@
 # 🎬 MovieMood - AI-Powered Movie Expert System
 
-A sophisticated rule-based expert system that provides personalized movie recommendations using advanced AI inference with 15+ intelligent rules. Built with React, TypeScript, Framer Motion, and Node.js.
+MovieMood is a sophisticated rule-based expert system that provides personalized movie recommendations using advanced AI inference with 15+ intelligent rules. Built with React, TypeScript, Framer Motion, and Node.js.
 
 ## ✨ Features
 
