@@ -10,6 +10,12 @@ const port = 3001;
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from the frontend build (dist) directory
+const distPath = path.join(__dirname, '../dist');
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+}
+
 // Load movie data
 const moviesData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'movies.json'), 'utf8'));
 const movieRules = new MovieRules();
@@ -115,6 +121,18 @@ app.get('/api/options', (req, res) => {
       { value: 'night', label: 'Late night' }
     ]
   });
+});
+
+
+// Fallback: serve index.html for any non-API route (SPA support)
+app.get('*', (req, res) => {
+  if (req.path.startsWith('/api/')) {
+    res.status(404).json({ error: 'API route not found' });
+  } else if (fs.existsSync(path.join(distPath, 'index.html'))) {
+    res.sendFile(path.join(distPath, 'index.html'));
+  } else {
+    res.status(404).send('Frontend not built. Please run npm run build.');
+  }
 });
 
 app.listen(port, () => {
